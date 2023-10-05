@@ -1,8 +1,16 @@
 import golosinas.*
 
 object mariano {
-	var golosinas = []
-	 
+	const golosinas = []
+	
+	method comprarGolosinas(variasGolosinas){
+		golosinas.addAll(variasGolosinas)
+	}
+	
+	method baniar(unaGolosina){
+		golosinas.add(new GolosinaBaniada(peso=unaGolosina.peso(),golosinaInterior=unaGolosina))
+	}
+	
 	method comprar(_golosina) { golosinas.add(_golosina) }
 	
 	method desechar (_golosina) { golosinas.remove(_golosina) }
